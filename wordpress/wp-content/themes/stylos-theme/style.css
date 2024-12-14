@@ -9,6 +9,8 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: stylos-theme
 */
+
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 img,
 picture,
 video,
@@ -52,6 +55,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Custom Theme Variables */
 :root {
   --primary: #f0b1cc;
   --primary2: #c73e89;
@@ -102,9 +107,24 @@ body {
   gap: 0.5rem;
 }
 
-.social-icons img {
-  width: 24px;
-  height: 24px;
+.social-link {
+  display: inline-block;
+}
+
+.social-icons .icon {
+  font-size: 1rem;
+  background-color: var(--primaryLight);
+  color: var(--primary2);
+  border-radius: 0.375rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons .icon:hover {
+ transition duration-300 hover:scale-110 md:hover:scale-125
+}
+
+.social-icons .icon-md:hover {
+  transform: scale(1.25);
 }
 
 .text-primary2 {
@@ -116,11 +136,11 @@ body {
 }
 
 .text-xs {
-  font-size: 0.75rem;
+  font-size: 0.5rem;
 }
 
 .text-sm {
-  font-size: 0.6rem;
+  font-size: 0.4rem;
 }
 
 .bg-primaryLight {
@@ -221,10 +241,6 @@ body {
   font-size: 0.6rem;
 }
 
-.hover-scale:hover {
-  transform: scale(1.1);
-}
-
 .search-box {
   width: 100%;
   padding: 10px;
@@ -248,3 +264,19 @@ body {
 .mobile-menu-button:hover {
   background-color: var(--secondary);
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: inline-block;
+}
+
+.logo-img {
+  width: 120px; 
+  height: auto; 
+  max-width: 100%; 
+}
+
