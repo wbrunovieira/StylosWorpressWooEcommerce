@@ -23,6 +23,8 @@ docker-compose.local.yaml
 .env.test.local
 .env.production.local
 db_data/
+.docker/
+.dockerignore
 
 # Arquivos gerados pelo WordPress
 wordpress/wp-config.php
@@ -30,6 +32,8 @@ wordpress/wp-content/uploads/
 wordpress/wp-content/upgrade/
 wordpress/wp-content/cache/
 wordpress/wp-content/plugins/
+wordpress/wp-content/mu-plugins/
+wordpress/wp-content/ai1wm-backups/
 wordpress/.htaccess
 wordpress/debug.log
 wordpress/wp-content/debug.log
@@ -43,6 +47,7 @@ logs/
 .vscode/
 *.sublime-project
 *.sublime-workspace
+.vimrc
 
 # Backups e arquivos temporários
 *.bak
@@ -50,6 +55,8 @@ logs/
 *.tmp
 *.sql
 *.sqlite
+.eslintcache
+.prettierignore
 
 # Arquivos de sistema do macOS
 .DS_Store
@@ -61,3 +68,6 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
+# Configurações de Python
+__pycache__/
+.pytest_cache/
