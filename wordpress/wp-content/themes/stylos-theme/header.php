@@ -26,7 +26,7 @@
         </div>
 
       </div>
-      <div class="flex justify-center  text-xs text-primary2">
+      <div class="flex justify-center '--0 text-xs text-primary2">
         <p>Entrega grátis a partir de R$ 200,00</p>
       </div>
     </div>

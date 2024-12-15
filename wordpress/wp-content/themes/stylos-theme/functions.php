@@ -33,3 +33,30 @@ function stylos_custom_logo_setup()
   ));
 }
 add_action('after_setup_theme', 'stylos_custom_logo_setup');
+
+function cadastrar_produto_ficticio()
+{
+  // Verifica se WooCommerce está ativo
+  if (!class_exists('WC_Product_Simple')) {
+    return; // Sai da função se WooCommerce não estiver ativo
+  }
+
+  if (get_transient('produto_tenis_cadastrado')) {
+    return; // Sai da função se já tiver cadastrado
+  }
+
+  $product = new WC_Product_Simple();
+
+  // Código do produto (mantém o mesmo)
+
+  // Salvar o produto
+  $product_id = $product->save();
+
+  // Marca como "cadastrado" para que não seja executado novamente
+  set_transient('produto_tenis_cadastrado', true, 60 * 60 * 24); // Expira em 24 horas
+
+  return $product_id;
+}
+
+add_action('init', 'cadastrar_produto_ficticio');
+
