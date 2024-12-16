@@ -229,6 +229,7 @@ body {
 
 .text-center {
   text-align: center;
+  color: var(--primary2);
 }
 
 .img-logo {
@@ -280,3 +281,95 @@ body {
   max-width: 100%; 
 }
 
+/* Estilo do banner */
+.banner-slider {
+  position: relative;
+  width: 100vw;
+  max-width: 100%; 
+  height: 400px; /* Altura do banner */
+  overflow: hidden;
+    margin: 0;
+  padding: 0;
+}
+
+.banner-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  opacity: 0; 
+  filter: brightness(0.8);
+ 
+  transition: opacity 1s ease-in-out; 
+}
+
+
+.banner-slide img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover; 
+}
+
+.banner-slide.active {
+  opacity: 1; 
+
+  z-index: 1; 
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+
+.banner-content {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 10; 
+  background-color: rgba(252, 243, 247, 0.7); 
+  padding: 20px; 
+  border-radius: 12px; 
+  text-align: center; 
+  max-width: 90%; 
+}
+
+
+
+
+.banner-content h1 {
+  color: var(--primaryDark);
+  font-size: 2.25rem; 
+line-height: 2.5rem; 
+
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  color: var(--secondary);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

@@ -18,15 +18,14 @@
             <i class="fab fa-instagram hover-scale text-primary2"></i>
           </a>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link">
-            <i class="fab fa-facebook-f hover-scale text-primary2 "></i>
+            <i class="fab fa-facebook-f hover-scale text-primary2"></i>
           </a>
           <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-link">
             <i class="fab fa-tiktok hover-scale text-primary2"></i>
           </a>
         </div>
-
       </div>
-      <div class="flex justify-center '--0 text-xs text-primary2">
+      <div class="flex justify-center text-xs text-primary2">
         <p>Entrega grátis a partir de R$ 200,00</p>
       </div>
     </div>
@@ -42,7 +41,6 @@
       <a href="/" class="flex gap-2 items-center justify-center">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoStylos.png" width="96" height="96"
           alt="logo" class="mr-2 max-w-full" style="height: auto;">
-
       </a>
     </div>
   </header>
