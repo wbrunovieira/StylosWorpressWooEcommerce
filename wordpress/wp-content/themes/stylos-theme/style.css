@@ -78,6 +78,36 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+
+.site-main {
+ max-width: 1200px;
+  
+  margin: 0 auto;
+  
+  padding: 20px;
+  
+  width: 100%;
+  
+  box-sizing: border-box;
+  
+  min-height: 100vh;
+  
+  background-color: #f9f9f9;
+  
+  display: flex;
+  flex-direction: column;
+  
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .site-main {
+    padding: 10px;
+    gap: 15px;
+  }
+}
+
+
 .header {
   background-color: var(--primary);
   padding: 0.5rem 1rem;
@@ -284,12 +314,12 @@ body {
   max-width: 100%; 
 }
 
-/* Estilo do banner */
+
 .banner-slider {
   position: relative;
   width: 100vw;
   max-width: 100%; 
-  height: 400px; /* Altura do banner */
+  height: 400px; 
   overflow: hidden;
     margin: 0;
   padding: 0;
@@ -306,6 +336,24 @@ body {
  
   transition: opacity 1s ease-in-out; 
 }
+
+.banner-content {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-55%, -30%);
+  z-index: 10; 
+  background-color: rgba(252, 243, 247, 0.7); 
+  padding: 20px; 
+  border-radius: 12px; 
+  text-align: center; 
+  max-width: 90%; 
+   display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+
 
 
 .banner-slide img {
@@ -334,18 +382,6 @@ body {
 }
 
 
-.banner-content {
-  position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  z-index: 10; 
-  background-color: rgba(252, 243, 247, 0.7); 
-  padding: 20px; 
-  border-radius: 12px; 
-  text-align: center; 
-  max-width: 90%; 
-}
 
 
 

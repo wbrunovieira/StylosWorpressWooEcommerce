@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="site-main">
-  <h1 class="text-center">Bem-vindo à Loja Stylos</h1>
+
 
 
   <section class="banner-slider">
