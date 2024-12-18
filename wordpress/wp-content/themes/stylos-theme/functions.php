@@ -59,3 +59,10 @@ function stylos_enqueue_custom_scripts()
   wp_enqueue_script('stylos-banner-slider', get_template_directory_uri() . '/assets/js/banner-slider.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'stylos_enqueue_custom_scripts');
+
+function habilitar_bloco_shortcode()
+{
+  register_block_type('core/shortcode');
+}
+add_action('init', 'habilitar_bloco_shortcode');
+
